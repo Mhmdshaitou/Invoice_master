@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Connectons-nous !"
+            android:textSize="28dp"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:textColor="#001F57"
+            />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:srcCompat="@drawable/login" />
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Entrez votre nom"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            android:padding="18dp"
+            android:background="@drawable/main_background"
+            android:textColorHint="@color/white"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/white"
+            android:hint="Entrer le mot de passe"
+            android:inputType="textPassword"
+            android:padding="18dp"
+            android:background="@drawable/main_background"
+            android:textColorHint="@color/white"
+            android:textSize="16dp" />
+
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D7001F57"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:textColor="@color/white"
+            android:text="Commencez maintenant" />
+
+
+    </LinearLayout>
+
+</ScrollView>

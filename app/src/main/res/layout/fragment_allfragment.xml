@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.Allfragment"
+    android:background="@color/white">
+
+   <com.google.android.material.tabs.TabLayout
+       android:id="@+id/tab_layout"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:backgroundTint="@color/background"
+       android:visibility="visible"
+       app:tabIndicatorColor="@android:color/white"
+       app:tabIndicatorFullWidth="true"
+       app:tabTextColor="@android:color/white">
+
+      <com.google.android.material.tabs.TabItem
+          android:id="@+id/tab_item_monday"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Toute" />
+
+      <com.google.android.material.tabs.TabItem
+          android:id="@+id/tab_item_tuesday"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="non validé" />
+
+      <com.google.android.material.tabs.TabItem
+          android:id="@+id/tab_item_wednesday"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="validé" />
+   </com.google.android.material.tabs.TabLayout>
+
+   <com.facebook.shimmer.ShimmerFrameLayout
+       android:id="@+id/shimmer"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/tab_layout">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical"
+          >
+
+         <include layout="@layout/shimmerinvoice"></include>
+
+         <include layout="@layout/shimmerinvoice"></include>
+
+         <include layout="@layout/shimmerinvoice"></include>
+
+         <include layout="@layout/shimmerinvoice"></include>
+
+         <include layout="@layout/shimmerinvoice"></include>
+
+         <include layout="@layout/shimmerinvoice"></include>
+
+         <include layout="@layout/shimmerinvoice"></include>
+
+      </LinearLayout>
+
+   </com.facebook.shimmer.ShimmerFrameLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:gravity="center"
+       android:layout_below="@id/tab_layout">
+
+      <TextView
+          android:id="@+id/tv_connection_error"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Veuillez vérifier votre connexion"
+          android:textSize="18sp"
+          android:visibility="gone"
+          android:layout_centerInParent="true"
+          />
+
+      <com.google.android.material.button.MaterialButton
+          android:id="@+id/btn_refresh"
+          android:layout_width="185dp"
+          android:layout_height="wrap_content"
+          android:backgroundTint="@color/counter_text_color"
+          android:text="Rafraîchir"
+          android:textColor="@color/white"
+          android:textSize="20dp"
+          android:visibility="gone"
+          app:cornerRadius="26dp" />
+   </LinearLayout>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/invoices_recycler"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_below="@id/shimmer"
+       android:layout_marginStart="5dp"
+       android:layout_marginEnd="5dp"
+       android:visibility="gone" />
+
+</RelativeLayout>

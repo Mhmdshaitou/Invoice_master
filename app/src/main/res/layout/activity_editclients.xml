@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+
+        <!-- Your custom Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_add"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/background"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+
+            <!-- Custom title view for centering the title -->
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Modifier le client"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="14dp"
+            android:hint="Nom du client"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxBackgroundMode="outline"
+            app:boxCollapsedPaddingTop="10dp"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusTopStart="14dp"
+            app:boxStrokeColor="@color/counter_text_color"
+            app:counterTextColor="@color/counter_text_color"
+            app:endIconTint="@color/counter_text_color"
+            app:helperTextTextColor="#000000"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/counter_text_color"
+            app:placeholderTextColor="#131111"
+            app:prefixTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text|textNoSuggestions"
+                android:textColor="#040404"
+                android:textColorHighlight="@color/counter_text_color"
+                android:textColorHint="#171616"
+                android:textColorLink="#000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Phone TextInputLayout -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="14dp"
+            android:hint="Numéro de téléphone"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxBackgroundMode="outline"
+            app:boxCollapsedPaddingTop="10dp"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusTopStart="14dp"
+            app:boxStrokeColor="@color/counter_text_color"
+            app:counterTextColor="@color/counter_text_color"
+            app:endIconTint="@color/counter_text_color"
+            app:helperTextTextColor="#000000"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/counter_text_color"
+            app:placeholderTextColor="#131111"
+            app:prefixTextColor="#000000">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:textColor="#040404"
+                android:textColorHighlight="@color/counter_text_color"
+                android:textColorHint="#171616"
+                android:textColorLink="#000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Address TextInputLayout -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="14dp"
+            android:hint="Adresse"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxBackgroundMode="outline"
+            app:boxCollapsedPaddingTop="10dp"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusTopStart="14dp"
+            app:boxStrokeColor="@color/counter_text_color"
+            app:counterTextColor="@color/counter_text_color"
+            app:endIconTint="@color/counter_text_color"
+            app:helperTextTextColor="#000000"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/counter_text_color"
+            app:placeholderTextColor="#131111"
+            app:prefixTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/layoutaddrees"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text|textNoSuggestions"
+                android:textColor="#040404"
+                android:textColorHighlight="@color/counter_text_color"
+                android:textColorHint="#171616"
+                android:textColorLink="#000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/submitbutton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="14dp"
+            android:text="Enregistrer le client"
+            android:textSize="20dp"
+            app:cornerRadius="26dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/counter_text_color"/>
+
+    </LinearLayout>
+</ScrollView>

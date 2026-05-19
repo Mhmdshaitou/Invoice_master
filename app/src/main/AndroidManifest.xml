@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.InvoiceMaster"
+        tools:targetApi="31">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.invoicemaster.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:ignore="WrongManifestParent">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".PreferenceManager"
+            android:exported="false" />
+        <activity
+            android:name=".dashbordi"
+            android:exported="false" />
+        <activity
+            android:name=".dashborduserinvoice"
+            android:exported="false"
+            android:parentActivityName=".userreport" />
+        <activity
+            android:name=".userreport"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Addnewuser"
+            android:exported="true"></activity>
+        <activity
+            android:name=".UserEditInvoice"
+            android:exported="true" />
+        <activity
+            android:name=".UserInvoice"
+            android:exported="false" />
+        <activity
+            android:name=".user.UserMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".viewreport"
+            android:exported="false" />
+        <activity
+            android:name=".Report"
+            android:exported="false" />
+        <activity
+            android:name=".mangestockdetails"
+            android:exported="false" />
+        <activity
+            android:name=".itemstockadapter"
+            android:exported="false" />
+        <activity
+            android:name=".fragments.PreviewInvoiceFragment"
+            android:exported="false"
+            android:theme="@style/Theme.InvoiceMaster" />
+        <activity
+            android:name=".EditInvoiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditInvoiceItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddNewinvoiceitem"
+            android:exported="false" />
+        <activity
+            android:name=".Managestock"
+            android:exported="false" />
+        <activity
+            android:name=".Edituser"
+            android:exported="false" />
+        <activity
+            android:name=".Manageuser"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".EditItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Editclients"
+            android:exported="false" />
+        <activity
+            android:name=".login"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".InvoiceActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AddNewItemActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Addnewclient"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="4dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="8dp"
+    android:backgroundTint="#dddd">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/imageViewProfile"
+            android:layout_width="56dp"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ciecleshimmer"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_toEndOf="@+id/imageViewProfile"
+            android:text=" "
+
+            android:background="#DDBCBCBC"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/addressTextView"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTextView"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/imageViewProfile"
+            android:background="#DDBCBCBC"
+            android:text=" " />
+
+        <TextView
+            android:id="@+id/phoneTextView"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addressTextView"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_toEndOf="@+id/imageViewProfile"
+            android:text=" "
+            android:background="#DDBCBCBC"/>
+
+        <ImageView
+            android:id="@+id/imageViewOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_more_vert" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

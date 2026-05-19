@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp"
+    android:backgroundTint="#dddd">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvClientName"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="#DDBCBCBC"
+            app:cardCornerRadius="25dp"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvInvoiceNumber"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvClientName"
+            android:layout_marginTop="7dp"
+
+            android:background="#DDBCBCBC" />
+
+        <TextView
+            android:id="@+id/tvInvoiceDate"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvInvoiceNumber"
+            android:layout_marginTop="6dp"
+            android:background="#DDBCBCBC" />
+
+        <TextView
+            android:id="@+id/tvInvoiceAmount"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:singleLine="true"
+            android:text="   "
+            android:background="#DDBCBCBC"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textColor="@color/tab_text_selected"
+            android:textSize="14sp" />
+
+
+
+        <TextView
+            android:id="@+id/tvInvoiceStatus"
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvInvoiceAmount"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text=""
+            android:background="#DDBCBCBC"
+            android:textColor="@color/status_color1"
+            android:textSize="15sp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tvInvoiceStatus2"
+            android:layout_width="71dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvInvoiceAmount"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:background="#DDBCBCBC"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text=""
+            android:textAppearance="?attr/textAppearanceListItemSmall"
+            android:textColor="@color/teal_700"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

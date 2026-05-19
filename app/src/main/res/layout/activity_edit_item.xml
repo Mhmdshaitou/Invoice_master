@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_add"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/background"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+
+            <!-- Custom title view for centering the title -->
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Modifier l'article"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutitemname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="14dp"
+            android:hint="Nom de l'article"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxBackgroundMode="outline"
+            app:boxCollapsedPaddingTop="10dp"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusTopStart="14dp"
+            app:boxStrokeColor="@color/counter_text_color"
+            app:counterTextColor="@color/counter_text_color"
+            app:endIconTint="@color/counter_text_color"
+            app:helperTextTextColor="#000000"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/counter_text_color"
+            app:placeholderTextColor="#131111"
+            app:prefixTextColor="#000000">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="#040404"
+                android:textColorHighlight="@color/counter_text_color"
+                android:textColorHint="#171616"
+                android:textColorLink="#000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp">
+            <!-- Item Price TextInputLayout -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutcode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="0dp"
+                android:hint="Code"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxBackgroundMode="outline"
+                app:boxCollapsedPaddingTop="10dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxStrokeColor="@color/counter_text_color"
+                app:counterTextColor="@color/counter_text_color"
+                app:endIconTint="@color/counter_text_color"
+                app:helperTextTextColor="#000000"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/counter_text_color"
+                app:placeholderTextColor="#131111"
+                app:prefixTextColor="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="#040404"
+                    android:textColorHighlight="@color/counter_text_color"
+                    android:textColorHint="#171616"
+                    android:textColorLink="#000000" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Item Price TextInputLayout -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutpiecep"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:hint="Prix ​​de l'article"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxBackgroundMode="outline"
+                app:boxCollapsedPaddingTop="10dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxStrokeColor="@color/counter_text_color"
+                app:counterTextColor="@color/counter_text_color"
+                app:endIconTint="@color/counter_text_color"
+                app:helperTextTextColor="#000000"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/counter_text_color"
+                app:placeholderTextColor="#131111"
+                app:prefixTextColor="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textColor="#040404"
+                    android:textColorHighlight="@color/counter_text_color"
+                    android:textColorHint="#171616"
+                    android:textColorLink="#000000" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp">
+
+            <!-- Carton Number TextInputLayout -->
+
+            <!-- Packet Price TextInputLayout -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutcostprice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="0dp"
+                android:hint="Prix ​​de revient"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxBackgroundMode="outline"
+                app:boxCollapsedPaddingTop="10dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxStrokeColor="@color/counter_text_color"
+                app:counterTextColor="@color/counter_text_color"
+                app:endIconTint="@color/counter_text_color"
+                app:helperTextTextColor="#000000"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/counter_text_color"
+                app:placeholderTextColor="#131111"
+                app:prefixTextColor="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textColor="#040404"
+                    android:textColorHighlight="@color/counter_text_color"
+                    android:textColorHint="#171616"
+                    android:textColorLink="#000000" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- Carton Price TextInputLayout -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutcartonQty"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Quantité de carton"
+                android:layout_marginStart="8dp"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxBackgroundMode="outline"
+                app:boxCollapsedPaddingTop="10dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxStrokeColor="@color/counter_text_color"
+                app:counterTextColor="@color/counter_text_color"
+                app:endIconTint="@color/counter_text_color"
+                app:helperTextTextColor="#000000"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/counter_text_color"
+                app:placeholderTextColor="#131111"
+                app:prefixTextColor="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textColor="#040404"
+                    android:textColorHighlight="@color/counter_text_color"
+                    android:textColorHint="#171616"
+                    android:textColorLink="#000000" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp">
+            <!-- Carton Number TextInputLayout -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutcartonnb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:hint="Nombre dans le carton"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxBackgroundMode="outline"
+                app:boxCollapsedPaddingTop="10dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxStrokeColor="@color/counter_text_color"
+                app:counterTextColor="@color/counter_text_color"
+                app:endIconTint="@color/counter_text_color"
+                app:helperTextTextColor="#000000"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/counter_text_color"
+                app:placeholderTextColor="#131111"
+                app:prefixTextColor="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textColor="#040404"
+                    android:textColorHighlight="@color/counter_text_color"
+                    android:textColorHint="#171616"
+                    android:textColorLink="#000000" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Packet Number TextInputLayout -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutpacketnb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:hint="Nombre dans le Paquet"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxBackgroundMode="outline"
+                app:boxCollapsedPaddingTop="10dp"
+                app:boxCornerRadiusBottomEnd="14dp"
+                app:boxCornerRadiusBottomStart="14dp"
+                app:boxCornerRadiusTopEnd="14dp"
+                app:boxCornerRadiusTopStart="14dp"
+                app:boxStrokeColor="@color/counter_text_color"
+                app:counterTextColor="@color/counter_text_color"
+                app:endIconTint="@color/counter_text_color"
+                app:helperTextTextColor="#000000"
+                app:hintAnimationEnabled="true"
+                app:hintTextColor="@color/counter_text_color"
+                app:placeholderTextColor="#131111"
+                app:prefixTextColor="#000000">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|numberDecimal|numberSigned"
+                    android:textColor="#040404"
+                    android:textColorHighlight="@color/counter_text_color"
+                    android:textColorHint="#171616"
+                    android:textColorLink="#000000" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutitemlimit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="14dp"
+            android:hint="seuil de sécurité"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxBackgroundMode="outline"
+            app:boxCollapsedPaddingTop="10dp"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusTopStart="14dp"
+            app:boxStrokeColor="@color/counter_text_color"
+            app:counterTextColor="@color/counter_text_color"
+            app:endIconTint="@color/counter_text_color"
+            app:helperTextTextColor="#000000"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/counter_text_color"
+            app:placeholderTextColor="#131111"
+            app:prefixTextColor="#000000">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number|numberDecimal|numberSigned"
+                android:textColor="#040404"
+                android:textColorHighlight="@color/counter_text_color"
+                android:textColorHint="#171616"
+                android:textColorLink="#000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Submit Button -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/submitbutton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="14dp"
+            android:text="Enregistrer l'élément"
+            android:textSize="20dp"
+            app:cornerRadius="26dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/counter_text_color"/>
+
+    </LinearLayout>
+</ScrollView>

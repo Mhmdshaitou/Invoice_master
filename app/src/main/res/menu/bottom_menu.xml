@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cnb_unselectedColor="@color/white"
+
+    >
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home_white_24dp"
+        app:cnb_backgroundColor="#ff785b"
+        android:title="Home"
+        app:cnb_iconColor="@color/white"
+        app:cnb_textColor="@color/white"
+        />
+    <item
+        android:id="@+id/items"
+        android:icon="@drawable/ic_multiline_chart_white_24dp"
+        app:cnb_backgroundColor="#ff785b"
+        android:title="Articles"
+        app:cnb_iconColor="@color/white"
+        app:cnb_textColor="@color/white"
+        />
+    <item
+        android:id="@+id/clients"
+        android:icon="@drawable/ic_person_outline_white_24dp"
+        android:title="Clients"
+        app:cnb_backgroundColor="#ff785b"
+        app:cnb_iconColor="@color/white"
+        app:cnb_textColor="@color/white"
+         />
+    <item
+        android:id="@+id/dashboard"
+        android:icon="@drawable/ic_dashboard_outline_white_24dp"
+        android:title="Tableau de bord"
+        app:cnb_backgroundColor="#ff785b"
+        app:cnb_iconColor="@color/white"
+        app:cnb_textColor="@color/white"
+        />
+</menu>

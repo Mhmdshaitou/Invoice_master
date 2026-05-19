@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <!-- Custom Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_add"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/background"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Ajouter un nouvel utilisateur"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Email TextInputLayout -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="14dp"
+            android:hint="E-mail de l'utilisateur"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxBackgroundMode="outline"
+            app:boxCollapsedPaddingTop="10dp"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusTopStart="14dp"
+            app:boxStrokeColor="@color/counter_text_color"
+            app:counterTextColor="@color/counter_text_color"
+            app:endIconTint="@color/counter_text_color"
+            app:helperTextTextColor="#000000"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/counter_text_color"
+            app:placeholderTextColor="#131111"
+            app:prefixTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password TextInputLayout -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="14dp"
+            android:hint="Mot de passe"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxBackgroundMode="outline"
+            app:boxCollapsedPaddingTop="10dp"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusTopStart="14dp"
+            app:boxStrokeColor="@color/counter_text_color"
+            app:counterTextColor="@color/counter_text_color"
+            app:endIconTint="@color/counter_text_color"
+            app:helperTextTextColor="#000000"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/counter_text_color"
+            app:placeholderTextColor="#131111"
+            app:prefixTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Role Dropdown -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutRole"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="14dp"
+            android:hint="Rôle"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxBackgroundMode="outline"
+            app:boxCollapsedPaddingTop="10dp"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusTopStart="14dp"
+            app:boxStrokeColor="@color/counter_text_color"
+            app:counterTextColor="@color/counter_text_color"
+            app:endIconTint="@color/counter_text_color"
+            app:helperTextTextColor="#000000"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/counter_text_color"
+            app:placeholderTextColor="#131111"
+            app:prefixTextColor="#000000">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextViewRole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:textColor="#040404"
+                android:dropDownHeight="wrap_content"
+                android:dropDownWidth="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Submit Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/submitbutton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="14dp"
+            android:text="Enregistrer l'utilisateur"
+            android:textSize="20dp"
+            app:cornerRadius="26dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/counter_text_color"/>
+
+    </LinearLayout>
+</ScrollView>

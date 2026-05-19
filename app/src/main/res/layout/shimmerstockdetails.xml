@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="2dp"
+    android:backgroundTint="#dddd">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <!-- Left side: Operation Type and Operation Date -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="16sp"
+            android:background="#DDBCBCBC" />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="14sp"
+            android:layout_marginTop="8dp"
+            android:background="#DDBCBCBC" />
+    </LinearLayout>
+
+    <!-- Right side: Quantity and Current Quantity -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="14sp"
+            android:background="#DDBCBCBC" />
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="14sp"
+            android:layout_marginTop="8dp"
+            android:background="#DDBCBCBC" />
+    </LinearLayout>
+
+</LinearLayout>
+    </androidx.cardview.widget.CardView>

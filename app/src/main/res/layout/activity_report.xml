@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+    A
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <!-- Your existing layout content -->
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_add"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/background"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Rapports"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingStart="10dp"
+            android:text="Accès rapide"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="15dp">
+
+                <RadioGroup
+                    android:id="@+id/radioGroupQuickAccess"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/radio_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:checked="true"
+                        android:text="Toute" />
+
+                    <RadioButton
+                        android:id="@+id/radio_today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Aujourd hui" />
+
+                    <RadioButton
+                        android:id="@+id/radio_yesterday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Hier"
+                        tools:ignore="DuplicateIds" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/radioGroupLastWeek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/radio_last_week"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="La semaine dernière" />
+
+                    <RadioButton
+                        android:id="@+id/radio_this_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Ce mois-ci" />
+
+                    <RadioButton
+                        android:id="@+id/radio_last_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Le mois dernier" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- RadioGroup to ensure only one radio button is selected -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Entre les dates"
+                android:textSize="16sp"
+                android:paddingStart="10dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp">
+                <RadioButton
+                    android:id="@+id/radio_between_dates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="0dp"
+                    android:text="Appliquer le filtre entre deux dates"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layoutBetweenDates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutstartDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Date de début"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxStrokeColor="@color/counter_text_color"
+                    app:counterTextColor="@color/counter_text_color"
+                    app:endIconTint="@color/counter_text_color"
+                    app:hintAnimationEnabled="true"
+                    app:hintTextColor="@color/counter_text_color"
+                    app:placeholderTextColor="#131111"
+                    app:prefixTextColor="#000000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextstartDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:textColor="#040404"
+                        android:textColorHighlight="@color/counter_text_color"
+                        android:textColorHint="#171616"
+                        android:textColorLink="#000000"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:focusableInTouchMode="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutendDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:hint="Date de fin"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxStrokeColor="@color/counter_text_color"
+                    app:counterTextColor="@color/counter_text_color"
+                    app:endIconTint="@color/counter_text_color"
+                    app:hintAnimationEnabled="true"
+                    app:hintTextColor="@color/counter_text_color"
+                    app:placeholderTextColor="#131111"
+                    app:prefixTextColor="#000000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextendDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:textColor="#040404"
+                        android:textColorHighlight="@color/counter_text_color"
+                        android:textColorHint="#171616"
+                        android:textColorLink="#000000"
+                        android:focusable="false"
+                        android:clickable="true"
+                        android:focusableInTouchMode="false" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Cliente "
+            android:textSize="16sp"
+            android:paddingStart="10dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutclient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:hint="Sélectionnez un client"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxStrokeColor="@color/counter_text_color"
+            app:counterTextColor="@color/counter_text_color"
+            app:endIconTint="@color/counter_text_color"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/counter_text_color"
+            app:placeholderTextColor="#131111"
+            app:prefixTextColor="#000000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextclient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:inputType="none"
+                android:textColor="#040404"
+                android:textColorHighlight="@color/counter_text_color"
+                android:textColorHint="#171616"
+                android:textColorLink="#000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btn_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Réinitialiser" />
+
+            <Button
+                android:id="@+id/btn_view_report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Voir le rapport"
+                android:layout_marginStart="16dp"
+                android:backgroundTint="@android:color/holo_blue_light" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>

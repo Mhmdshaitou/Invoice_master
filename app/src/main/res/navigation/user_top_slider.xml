@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_top_slider"
+    app:startDestination="@id/userEditFragment">
+
+    <fragment
+        android:id="@+id/userEditFragment"
+        android:name="com.example.invoicemaster.UserEditFragment"
+        android:label="fragment_user_edit"
+        tools:layout="@layout/fragment_user_edit" />
+</navigation>

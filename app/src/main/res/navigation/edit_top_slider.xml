@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/top_slider"
+    app:startDestination="@id/editFragment12">
+
+    <fragment
+        android:id="@+id/editFragment12"
+        android:name="com.example.invoicemaster.fragments.EditInvoiceFragment"
+        android:label="fragment_edit_invoice"
+        tools:layout="@layout/fragment_edit_invoice" />
+    <fragment
+        android:id="@+id/previewFragment12"
+        android:name="com.example.invoicemaster.fragments.PreviewInvoiceFragment"
+        android:label="fragment_preview_invoice"
+        tools:layout="@layout/fragment_preview_invoice" />
+</navigation>

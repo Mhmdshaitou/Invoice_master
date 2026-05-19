@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/bottom_border">
+
+
+    <TextView
+        android:id="@+id/itemcode"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="8dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textAlignment="textStart"
+        />
+    <TextView
+        android:id="@+id/itemname"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="8dp"
+        android:text=""
+        android:textColor="#000000"
+        android:textAlignment="textStart" />
+
+    <TextView
+        android:id="@+id/itemunit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="8dp"
+        android:text=""
+        android:textColor="#000000"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/unitnumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="8dp"
+        android:text=""
+        android:textColor="#000000"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/itemprice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="8dp"
+        android:text=""
+        android:textColor="#000000"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/totalprice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="8dp"
+        android:text=""
+        android:textColor="#000000"
+        android:gravity="center" />
+
+</LinearLayout>

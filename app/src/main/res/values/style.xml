@@ -1,0 +1,11 @@
+
+<resources>
+    <style name="appTheme" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <item name="background"> @color/background </item>
+        <item name="closeIcon">@drawable/baseline_keyboard_backspace_24</item>
+
+
+    </style>
+
+</resources>

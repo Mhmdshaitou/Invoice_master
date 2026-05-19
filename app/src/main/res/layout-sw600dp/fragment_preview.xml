@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".previewfragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/button_container">
+
+
+        <RelativeLayout
+            android:id="@+id/invoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:minHeight="1100sp"
+            android:layout_centerInParent="true"
+            android:padding="10dp"
+            android:elevation="6dp">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="170sp"
+                android:layout_height="130sp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/invoice_logo_icon" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BON DE LIVRAISON"
+                android:textStyle="bold"
+                android:textColor="@color/tab_text_selected"
+                android:textSize="16dp"
+                android:layout_toEndOf="@id/imageView2"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="25dp" />
+
+            <TextView
+                android:id="@+id/facture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tab_text_selected"
+                android:text="Facture: "
+                android:layout_below="@id/textView4"
+                android:layout_alignStart="@id/textView4"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/idoutput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16dp"
+                android:textColor="@color/tab_text_selected"
+                android:layout_alignBaseline="@id/facture"
+                android:layout_toEndOf="@id/facture"
+                android:layout_marginStart="2dp"/>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Client:"
+                android:textStyle="bold"
+                android:textColor="@color/tab_text_selected"
+                android:textSize="16dp"
+                android:layout_toEndOf="@id/textView4"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/clientoutput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tab_text_selected"
+                android:text="Client Name"
+                android:textSize="15dp"
+                android:layout_marginStart="3dp"
+                android:layout_alignBaseline="@id/textView7"
+                android:layout_toEndOf="@id/textView7"/>
+
+            <TextView
+                android:id="@+id/addressLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tab_text_selected"
+                android:text="Adresse:"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_below="@id/textView7"
+                android:layout_alignStart="@id/textView7"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tab_text_selected"
+                android:text="Address"
+                android:textSize="15dp"
+                android:layout_marginStart="3dp"
+                android:layout_alignBaseline="@id/addressLabel"
+                android:layout_toEndOf="@id/addressLabel"/>
+
+            <TextView
+                android:id="@+id/phoneLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tab_text_selected"
+                android:text="Téléphone: "
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_below="@id/addressLabel"
+                android:layout_alignStart="@id/addressLabel"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tab_text_selected"
+                android:text="+5555555555"
+                android:textSize="15dp"
+                android:layout_alignBaseline="@id/phoneLabel"
+                android:layout_toEndOf="@id/phoneLabel" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="1dp"
+                android:layout_below="@id/phone"
+                android:background="@android:color/darker_gray" />
+
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Table Header -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FF0000"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="REF"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="NOM D'Arcticle"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:textAlignment="textStart" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="QNT"
+                            android:layout_marginLeft="35dp"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="NU"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="PRIX"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="TOTAL"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Example Row 1 -->
+                    <LinearLayout
+                        android:id="@+id/itemsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="670dp"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginEnd="3dp"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <View
+                android:id="@+id/totalSeparator"
+                android:layout_width="220dp"
+                android:layout_height="2dp"
+                android:layout_alignEnd="@+id/totalSection"
+                android:layout_above="@+id/totalSection"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Total Section -->
+            <RelativeLayout
+                android:id="@+id/totalSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scrollView2"
+                android:layout_marginTop="20sp"
+                android:gravity="right"
+                android:padding="16dp">
+
+                <!-- Left side TextViews -->
+                <TextView
+                    android:id="@+id/Label1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="TEL : 20 37 09 50 / 05 04 10 41 41"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="150sp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/Label2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Label1"
+                    android:layout_marginLeft="130sp"
+                    android:layout_alignParentStart="true"
+                    android:text="ADJAME ROXY / BOULEVARD NANGUI ABROGOUA"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Label2"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="150sp"
+                    android:text="EMAIL: OPEN-CI@HOTMAIL.COM"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <!-- Right side TextViews -->
+                <TextView
+                    android:id="@+id/subtotalLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="TOTAL:"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/subtotalValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/subtotalLabel"
+                    android:layout_toEndOf="@id/subtotalLabel"
+                    android:text="0 CFA"
+                    android:layout_marginStart="18dp"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/DiscountLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/subtotalLabel"
+                    android:layout_alignParentEnd="true"
+                    android:text="Remise: "
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/discountValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/DiscountLabel"
+                    android:layout_toEndOf="@id/DiscountLabel"
+                    android:text="0 CFA"
+                    android:layout_marginStart="18dp"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/taxLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/DiscountLabel"
+                    android:layout_alignParentEnd="true"
+                    android:text="TVA:"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/taxValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/taxLabel"
+                    android:layout_toEndOf="@id/taxLabel"
+                    android:text="0 CFA"
+                    android:layout_marginStart="18dp"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/totalLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/taxLabel"
+                    android:layout_alignParentEnd="true"
+                    android:text="Total:"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/totalValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/totalLabel"
+                    android:layout_toEndOf="@id/totalLabel"
+                    android:text="0 CFA"
+                    android:layout_marginStart="18dp"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp">
+
+        <Button
+            android:id="@+id/printbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Imprimer maintenant"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF"/>
+
+        <Button
+            android:id="@+id/sharebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Partager"
+            android:backgroundTint="#000000"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="16dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
